@@ -8,7 +8,7 @@ Render SVG images or write your own in-line and animate them, fun!
 
 
 [![Example code result](https://raw.githubusercontent.com/brentvatne/react-native-svg/master/chart-example.png)](https://github.com/brentvatne/react-native-svg/blob/master/Chart.js)
-*This chart renders from a source file, but I'm sure that a backend could easily be made for [xkcd.js](http://dan.iel.fm/xkcd/) to do this for us live*
+*This chart renders from a source file, but I'm sure that a backend could be made for [d3/xkcd](http://dan.iel.fm/xkcd/) to do this for us live*
 
 Uses [SVGKit](https://github.com/SVGKit/SVGKit) to do all of the hard work.
 
