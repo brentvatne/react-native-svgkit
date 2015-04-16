@@ -8,3 +8,11 @@ See
 [![Example code result](https://raw.githubusercontent.com/brentvatne/react-native-svg/master/line.gif)](https://github.com/brentvatne/react-native-svg/blob/master/Wave.js) [![Example code result](https://raw.githubusercontent.com/brentvatne/react-native-svg/master/logo.gif)](https://github.com/brentvatne/react-native-svg/blob/master/ReactLogo.js)
 
 Uses [SVGKit](https://github.com/SVGKit/SVGKit) to do all of the hard work.
+
+## TODO
+
+- Hit detection and events on individual SVG composites (Path, Line, etc)
+- Component for every SVG element: ‘circle’, ‘ellipse’, ‘line’,
+  ‘polygon’, ‘polyline’, ‘rect’, [etc..](http://www.w3.org/TR/SVG/intro.html)
+- Load source over HTTP
+- Look at performance..
