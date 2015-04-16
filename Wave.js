@@ -45,7 +45,7 @@ var Wave = React.createClass({
       <View style={{flex: 1, backgroundColor: 'black', justifyContent: 'center', alignItems: 'center'}}>
         <Svg width={500} height={500} style={{width: 320, height: 350}}
              forceUpdate={this.state.t.toString()}>
-          <Path fill="none" stroke="#00D8FF"strokeWidth="3" strokeMiterlimit="10"
+          <Path fill="none" stroke="#00D8FF" strokeWidth="3" strokeMiterlimit="10"
                 d={drawSine(this.state.t)} />
         </Svg>
       </View>
