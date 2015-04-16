@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:FromFile.xcodeproj">
+      location = "self:SvgExample.xcodeproj">
    </FileRef>
 </Workspace>

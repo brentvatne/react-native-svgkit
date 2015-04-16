@@ -26,6 +26,7 @@
 		BB3D661E1ADF016B00ECC42D /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BB3D661D1ADF016B00ECC42D /* libxml2.2.dylib */; };
 		BB3D66201ADF01DB00ECC42D /* logo.svg in Resources */ = {isa = PBXBuildFile; fileRef = BB3D661F1ADF01DB00ECC42D /* logo.svg */; };
 		BB4ECFA41ADF0003005D7009 /* libRNSvg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB4ECFA31ADEFFF8005D7009 /* libRNSvg.a */; };
+		BB9CC7B51AE039D9008A1D08 /* chart.svg in Resources */ = {isa = PBXBuildFile; fileRef = BB9CC7B41AE039D9008A1D08 /* chart.svg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +132,7 @@
 		BB3D661D1ADF016B00ECC42D /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
 		BB3D661F1ADF01DB00ECC42D /* logo.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = logo.svg; path = Libraries/logo.svg; sourceTree = "<group>"; };
 		BB4ECF9C1ADEFFF8005D7009 /* RNSvg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNSvg.xcodeproj; path = Libraries/RNSvg.xcodeproj; sourceTree = "<group>"; };
+		BB9CC7B41AE039D9008A1D08 /* chart.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = chart.svg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				BB3D661F1ADF01DB00ECC42D /* logo.svg */,
+				BB9CC7B41AE039D9008A1D08 /* chart.svg */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -479,6 +482,7 @@
 			files = (
 				008F07F31AC5B25A0029DE68 /* main.jsbundle in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				BB9CC7B51AE039D9008A1D08 /* chart.svg in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				BB3D66201ADF01DB00ECC42D /* logo.svg in Resources */,
 			);

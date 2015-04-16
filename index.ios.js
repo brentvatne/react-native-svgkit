@@ -13,10 +13,11 @@ var Path = require('./Path');
 var TimerMixin = require('react-timer-mixin');
 var ReactLogo = require('./ReactLogo');
 var Wave = require('./Wave');
+var Chart = require('./Chart');
 
 var SvgExample = React.createClass({
   render() {
-    return <Wave />;
+    return <Chart />;
   }
 });
 
