@@ -17,7 +17,7 @@ var Chart = require('./Chart');
 
 var SvgExample = React.createClass({
   render() {
-    return <Chart />;
+    return <Wave />;
   }
 });
 
