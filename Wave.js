@@ -1,9 +1,6 @@
 'use strict';
 
 function drawSine(t) {
-  var startX = 10;
-  var endX = 800;
-  var yScale = 5;
   var path = `M ${0} ${Math.sin(t) * 100 + 120}`;
   var x, y;
 
@@ -46,8 +43,10 @@ var Wave = React.createClass({
   render() {
     return (
       <View style={{flex: 1, backgroundColor: 'black', justifyContent: 'center', alignItems: 'center'}}>
-        <Svg ref="svg" width={500} height={500} style={{width: 320, height: 350}} forceUpdate={this.state.t.toString()}>
-          <Path fill="none" stroke="#00D8FF" strokeWidth="3" strokeMiterlimit="10" d={drawSine(this.state.t)} />
+        <Svg width={500} height={500} style={{width: 320, height: 350}}
+             forceUpdate={this.state.t.toString()}>
+          <Path fill="none" stroke="#00D8FF"strokeWidth="3" strokeMiterlimit="10"
+                d={drawSine(this.state.t)} />
         </Svg>
       </View>
     );
