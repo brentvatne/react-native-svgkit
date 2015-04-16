@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B6D38C22-E673-41FD-B7DC-A5EA10AF59BC</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D4FB4285E84F344A4A0DD36243C06E37C26A184E</key>
+		<string>github.com:SVGKit/SVGKit.git</string>
+	</dict>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D4FB4285E84F344A4A0DD36243C06E37C26A184E</key>
+		<string>SVGKit/</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:SVGKit/SVGKit.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D4FB4285E84F344A4A0DD36243C06E37C26A184E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D4FB4285E84F344A4A0DD36243C06E37C26A184E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SVGKit</string>
+		</dict>
+	</array>
+</dict>
+</plist>

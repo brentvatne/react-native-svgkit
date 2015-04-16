@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B4AB04C0-B111-4FE0-8CB4-78EA5686F9B1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>RNSvg</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C8389997033053F8D55FA885F73C191EA57D203E</key>
+		<string>github.com:brentvatne/react-native-overlay.git</string>
+		<key>D4FB4285E84F344A4A0DD36243C06E37C26A184E</key>
+		<string>github.com:SVGKit/SVGKit.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Examples/FromFile/Libraries/RNSvg.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C8389997033053F8D55FA885F73C191EA57D203E</key>
+		<string>../../../../..</string>
+		<key>D4FB4285E84F344A4A0DD36243C06E37C26A184E</key>
+		<string>../../../../..Examples/FromFile/Libraries/SVGKit/</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:brentvatne/react-native-overlay.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C8389997033053F8D55FA885F73C191EA57D203E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C8389997033053F8D55FA885F73C191EA57D203E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>react-native-svg</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D4FB4285E84F344A4A0DD36243C06E37C26A184E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SVGKit</string>
+		</dict>
+	</array>
+</dict>
+</plist>
