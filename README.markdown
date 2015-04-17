@@ -19,3 +19,4 @@ Uses [SVGKit](https://github.com/SVGKit/SVGKit) to do all of the hard work.
   ‘polygon’, ‘polyline’, ‘rect’, [etc..](http://www.w3.org/TR/SVG/intro.html)
 - Load source over HTTP
 - Look at performance..
+- Add animations to morph from one svg to another [like this](https://github.com/alexk111/SVG-Morpheus)
