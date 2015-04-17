@@ -20,3 +20,4 @@ Uses [SVGKit](https://github.com/SVGKit/SVGKit) to do all of the hard work.
 - Load source over HTTP
 - Look at performance..
 - Add animations to morph from one svg to another [like this](https://github.com/alexk111/SVG-Morpheus)
+- Add support for "drawing" animations [like this](https://github.com/maxwellito/vivus)
