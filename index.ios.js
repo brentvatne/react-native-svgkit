@@ -14,10 +14,11 @@ var TimerMixin = require('react-timer-mixin');
 var ReactLogo = require('./ReactLogo');
 var Wave = require('./Wave');
 var Chart = require('./Chart');
+var D3Chart = require('./D3Chart');
 
 var SvgExample = React.createClass({
   render() {
-    return <Wave />;
+    return <D3Chart />;
   }
 });
 

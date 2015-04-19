@@ -63,6 +63,8 @@ var Svg = React.createClass({
 
     if (this.props.source) {
       nativeProps.src = this.props.source.uri;
+    } else if (this.props.data) {
+      nativeProps.data = this.props.data;
     } else {
       nativeProps.data = this.stateFromChildren();
     }
