@@ -14,7 +14,7 @@ var D3Chart = React.createClass({
     this.loadDOM();
   },
 
-  renderOutline(window, el) {
+  renderChart(window, el) {
     var self = this;
     var margin = {top: 20, right: 20, bottom: 100, left: 100},
         width = 960 - margin.left - margin.right,
@@ -73,21 +73,14 @@ var D3Chart = React.createClass({
         .x(function(d) { return x(d.date); })
         .y(function(d) { return y(d.close); });
 
-    self.setState({window: window, el: el, svg: svg, x: x, y: y, line: line});
-    requestAnimationFrame(() => { self.renderData(100) });
-  },
-
-  renderData(n) {
-    this.state.svg.append("path")
+    svg.append("path")
         .datum(DATA)
         .attr("fill", "none")
         .attr("stroke", "steelblue")
         .attr('stroke-width', '3px')
-        .attr("d", this.state.line);
+        .attr("d", line);
 
-    console.log(this.state.el.innerHTML);
-
-    this.setState({data: this.state.el.innerHTML});
+    self.setState({data: el.innerHTML});
   },
 
   loadDOM(n) {
@@ -95,13 +88,12 @@ var D3Chart = React.createClass({
 
     jsdom.env('<body></body>', function(errors, window) {
       var el = window.document.querySelector('body');
-      self.renderOutline(window, el);
+      self.renderChart(window, el);
     })
   },
 
   render() {
     if (this.state && this.state.data) {
-      console.log('render');
       return (
         <View style={{paddingTop: 40}}>
           <Svg width={960} height={1600} style={{width: 390, height: 630}} data={this.state.data} forceUpdate={(new Date()).toString()} />
