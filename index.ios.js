@@ -19,6 +19,10 @@ var D3Chart = require('./D3Chart');
 var SvgExample = React.createClass({
   render() {
     return <D3Chart />;
+    // Uncomment out to try others
+    // return <Wave />;
+    // return <ReactLogo />;
+    // return <Chart />;
   }
 });
 
