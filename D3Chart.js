@@ -1,95 +1,110 @@
 var d3 = require('d3');
-var jsdom = require("jsdom-little");
+var jsdom = require('jsdom-jscore');
 var React = require('react-native');
 var { View, Text } = React;
 var Svg = require('./Svg');
+var TimerMixin = require('react-timer-mixin');
 
 var parseDate = d3.time.format("%d-%b-%y").parse;
 
 var D3Chart = React.createClass({
+  mixins: [TimerMixin],
+
   componentDidMount() {
-    this.renderChart();
+    this.loadDOM();
   },
 
-  renderChart() {
+  renderOutline(window, el) {
+    var self = this;
+    var margin = {top: 20, right: 20, bottom: 100, left: 100},
+        width = 960 - margin.left - margin.right,
+        height = 1600 - margin.top - margin.bottom;
+
+    var x = d3.time.scale()
+        .range([0, width]);
+
+    var y = d3.scale.linear()
+        .range([height, 0]);
+
+    var xAxis = d3.svg.axis()
+        .scale(x)
+        .orient("bottom");
+
+    var yAxis = d3.svg.axis()
+        .scale(y)
+        .orient("left");
+
+    var svg = d3.select(el).append("svg")
+        .attr('xmlns', 'http://www.w3.org/2000/svg')
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    x.domain(d3.extent(DATA, function(d) { return d.date; }));
+    y.domain(d3.extent(DATA, function(d) { return d.close; }));
+
+    svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis)
+
+    svg.selectAll('text')
+        .attr('transform', "translate(0, 30)")
+
+    svg.append("g")
+        .attr("class", "y axis")
+        .call(yAxis)
+      .append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 6)
+        .attr("dy", ".71em")
+        .style("text-anchor", "end")
+        .style('font-size', '32px')
+        .text("Price ($)");
+
+    svg.selectAll('.axis path')
+         .style({'stroke': 'black', 'fill': 'none', 'stroke-width': '1px'});
+
+    svg.selectAll('text')
+        .style('font-size', '32px')
+
+    var line = d3.svg.line()
+        .x(function(d) { return x(d.date); })
+        .y(function(d) { return y(d.close); });
+
+    self.setState({window: window, el: el, svg: svg, x: x, y: y, line: line});
+    requestAnimationFrame(() => { self.renderData(100) });
+  },
+
+  renderData(n) {
+    this.state.svg.append("path")
+        .datum(DATA)
+        .attr("fill", "none")
+        .attr("stroke", "steelblue")
+        .attr('stroke-width', '3px')
+        .attr("d", this.state.line);
+
+    console.log(this.state.el.innerHTML);
+
+    this.setState({data: this.state.el.innerHTML});
+  },
+
+  loadDOM(n) {
     var self = this;
 
     jsdom.env('<body></body>', function(errors, window) {
       var el = window.document.querySelector('body');
-
-      var margin = {top: 20, right: 20, bottom: 100, left: 100},
-          width = 960 - margin.left - margin.right,
-          height = 1500 - margin.top - margin.bottom;
-
-      var x = d3.time.scale()
-          .range([0, width]);
-
-      var y = d3.scale.linear()
-          .range([height, 0]);
-
-      var xAxis = d3.svg.axis()
-          .scale(x)
-          .orient("bottom");
-
-      var yAxis = d3.svg.axis()
-          .scale(y)
-          .orient("left");
-
-      var line = d3.svg.line()
-          .x(function(d) { return x(d.date); })
-          .y(function(d) { return y(d.close); });
-
-      var svg = d3.select(el).append("svg")
-          .attr('xmlns', 'http://www.w3.org/2000/svg')
-          .attr("width", width + margin.left + margin.right)
-          .attr("height", height + margin.top + margin.bottom)
-        .append("g")
-          .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-      x.domain(d3.extent(DATA, function(d) { return d.date; }));
-      y.domain(d3.extent(DATA, function(d) { return d.close; }));
-
-      svg.append("g")
-          .attr("class", "x axis")
-          .attr("transform", "translate(0," + height + ")")
-          .call(xAxis)
-
-      svg.selectAll('text')
-          .attr('transform', "translate(0, 30)")
-
-      svg.append("g")
-          .attr("class", "y axis")
-          .call(yAxis)
-        .append("text")
-          .attr("transform", "rotate(-90)")
-          .attr("y", 6)
-          .attr("dy", ".71em")
-          .style("text-anchor", "end")
-          .style('font-size', '32px')
-          .text("Price ($)");
-
-      svg.selectAll('.axis path')
-           .style({'stroke': 'Black', 'fill': 'none', 'stroke-width': '1px'});
-
-      svg.selectAll('text')
-          .style('font-size', '32px')
-
-      svg.append("path")
-          .datum(DATA)
-          .attr("fill", "none")
-          .attr("stroke", "#000")
-          .attr("class", "line")
-          .attr("d", line);
-
-      self.setState({data: el.innerHTML});
-    });
+      self.renderOutline(window, el);
+    })
   },
 
   render() {
     if (this.state && this.state.data) {
+      console.log('render');
       return (
         <View style={{paddingTop: 40}}>
-          <Svg width={960} height={1500} style={{width: 380, height: 620}} data={this.state.data} />
+          <Svg width={960} height={1600} style={{width: 390, height: 630}} data={this.state.data} forceUpdate={(new Date()).toString()} />
         </View>
       )
     } else {

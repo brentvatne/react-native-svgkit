@@ -73,8 +73,10 @@ var Svg = React.createClass({
   },
 });
 
+var deepDiffer = require('deepDiffer');
+
 var RNSvg = createReactIOSNativeComponentClass({
-  validAttributes: merge(ReactIOSViewAttributes.UIView, {src: true, data: true, originalWidth: true, originalHeight: true, forceUpdate: true}),
+  validAttributes: merge(ReactIOSViewAttributes.UIView, {src: true, data: {differ: deepDiffer}, originalWidth: true, originalHeight: true, forceUpdate: true}),
   uiViewClassName: 'RNSvg',
 });
 
