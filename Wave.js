@@ -33,7 +33,7 @@ var Wave = React.createClass({
   },
 
   componentDidMount() {
-    this.setInterval(this.updateTime, 30);
+    this.setInterval(this.updateTime, 16);
   },
 
   updateTime() {
