@@ -1,12 +1,15 @@
 {
   "name": "react-native-svg",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": true,
+  "main": "Svg.js",
   "scripts": {
     "start": "node_modules/react-native/packager/packager.sh"
   },
+  "peerDependencies": {
+    "react-native": "^0.4.1"
+  },
   "dependencies": {
-    "react-native": "^0.3.11",
     "d3": "^3.5.5",
     "jsdom-jscore": "^0.1.0"
   }
