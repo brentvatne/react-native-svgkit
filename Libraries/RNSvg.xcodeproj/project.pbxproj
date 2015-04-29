@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BB4ECF8A1ADEFBC9005D7009 /* libSVGKit-iOS.1.2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB4ECF851ADEFBBB005D7009 /* libSVGKit-iOS.1.2.0.a */; };
+		BBC9788C1AF1724500AD23F4 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BBC9788B1AF1724500AD23F4 /* libxml2.2.dylib */; };
+		BBC9788E1AF1725800AD23F4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBC9788D1AF1725800AD23F4 /* CoreGraphics.framework */; };
 		BBD49E3F1AC8DEF000610F8E /* RNSvg.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD49E3A1AC8DEF000610F8E /* RNSvg.m */; };
 		BBD49E401AC8DEF000610F8E /* RNSvgManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD49E3C1AC8DEF000610F8E /* RNSvgManager.m */; };
 /* End PBXBuildFile section */
@@ -45,6 +47,8 @@
 		134814201AA4EA6300B7C361 /* libRNSvg.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNSvg.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB4ECF7E1ADEFBBB005D7009 /* SVGKit-iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "SVGKit-iOS.xcodeproj"; path = "SVGKit/SVGKit-iOS.xcodeproj"; sourceTree = "<group>"; };
 		BB4ECF951ADEFD95005D7009 /* logo.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = logo.svg; sourceTree = "<group>"; };
+		BBC9788B1AF1724500AD23F4 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/usr/lib/libxml2.2.dylib; sourceTree = "<absolute>"; };
+		BBC9788D1AF1725800AD23F4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		BBD49E391AC8DEF000610F8E /* RNSvg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNSvg.h; sourceTree = "<group>"; };
 		BBD49E3A1AC8DEF000610F8E /* RNSvg.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = RNSvg.m; sourceTree = "<group>"; tabWidth = 2; };
 		BBD49E3B1AC8DEF000610F8E /* RNSvgManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNSvgManager.h; sourceTree = "<group>"; };
@@ -56,7 +60,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBC9788E1AF1725800AD23F4 /* CoreGraphics.framework in Frameworks */,
 				BB4ECF8A1ADEFBC9005D7009 /* libSVGKit-iOS.1.2.0.a in Frameworks */,
+				BBC9788C1AF1724500AD23F4 /* libxml2.2.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +80,8 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				BBC9788D1AF1725800AD23F4 /* CoreGraphics.framework */,
+				BBC9788B1AF1724500AD23F4 /* libxml2.2.dylib */,
 				BB4ECF951ADEFD95005D7009 /* logo.svg */,
 				BBD49E391AC8DEF000610F8E /* RNSvg.h */,
 				BBD49E3A1AC8DEF000610F8E /* RNSvg.m */,
@@ -264,6 +272,7 @@
 					"$(SRCROOT)/../react-native/React/**",
 					"$(SRCROOT)/node_modules/react-native/React/**",
 					"$(SRCROOT)/SVGKit/**",
+					"$(SRCROOT)/../../react-native/React/**",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -289,6 +298,7 @@
 					"$(SRCROOT)/../react-native/React/**",
 					"$(SRCROOT)/node_modules/react-native/React/**",
 					"$(SRCROOT)/SVGKit/**",
+					"$(SRCROOT)/../../react-native/React/**",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

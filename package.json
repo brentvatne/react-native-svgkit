@@ -1,15 +1,17 @@
 {
   "name": "react-native-svg",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "Svg.js",
-  "scripts": {
-    "start": "node_modules/react-native/packager/packager.sh"
-  },
+  "author": "Brent Vatne <brentvatne@gmail.com> (https://github.com/brentvatne)",
   "peerDependencies": {
     "react-native": "^0.4.1"
   },
   "dependencies": {
     "d3": "^3.5.5",
     "jsdom-jscore": "^0.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:brentvatne/react-native-video.git"
   }
 }

@@ -22,8 +22,6 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		BB3D66111ADF015600ECC42D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB3D66101ADF015600ECC42D /* CoreGraphics.framework */; };
-		BB3D661E1ADF016B00ECC42D /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BB3D661D1ADF016B00ECC42D /* libxml2.2.dylib */; };
 		BB3D66201ADF01DB00ECC42D /* logo.svg in Resources */ = {isa = PBXBuildFile; fileRef = BB3D661F1ADF01DB00ECC42D /* logo.svg */; };
 		BB4ECFA41ADF0003005D7009 /* libRNSvg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB4ECFA31ADEFFF8005D7009 /* libRNSvg.a */; };
 		BB9CC7B51AE039D9008A1D08 /* chart.svg in Resources */ = {isa = PBXBuildFile; fileRef = BB9CC7B41AE039D9008A1D08 /* chart.svg */; };
@@ -128,8 +126,6 @@
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
-		BB3D66101ADF015600ECC42D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		BB3D661D1ADF016B00ECC42D /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
 		BB3D661F1ADF01DB00ECC42D /* logo.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = logo.svg; path = Libraries/logo.svg; sourceTree = "<group>"; };
 		BB4ECF9C1ADEFFF8005D7009 /* RNSvg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNSvg.xcodeproj; path = Libraries/RNSvg.xcodeproj; sourceTree = "<group>"; };
 		BB9CC7B41AE039D9008A1D08 /* chart.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = chart.svg; sourceTree = "<group>"; };
@@ -140,8 +136,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB3D661E1ADF016B00ECC42D /* libxml2.2.dylib in Frameworks */,
-				BB3D66111ADF015600ECC42D /* CoreGraphics.framework in Frameworks */,
 				BB4ECFA41ADF0003005D7009 /* libRNSvg.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				00481BE81AC0C86700671115 /* libRCTWebSocketDebugger.a in Frameworks */,
@@ -276,8 +270,6 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				BB3D661D1ADF016B00ECC42D /* libxml2.2.dylib */,
-				BB3D66101ADF015600ECC42D /* CoreGraphics.framework */,
 				13B07FAE1A68108700A75B9A /* SvgExample */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				83CBBA001A601CBA00E9B192 /* Products */,

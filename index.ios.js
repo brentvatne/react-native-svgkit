@@ -6,6 +6,8 @@ var {
   StyleSheet,
   Text,
   View,
+  TextInput,
+  AlertIOS,
 } = React;
 
 var Svg = require('./Svg');
@@ -16,13 +18,30 @@ var Wave = require('./Wave');
 var Chart = require('./Chart');
 var D3Chart = require('./D3Chart');
 
+var getRefByNodeHandle = (handle, refs) => {
+  var result;
+
+  Object.keys(refs).forEach((refKey) => {
+    if (refs[refKey].getNodeHandle() === handle) {
+      result = refs[refKey];
+    }
+  })
+
+  return result;
+}
+
 var SvgExample = React.createClass({
+  nextInput(e) {
+    var ref = getRefByNodeHandle(e.target, this.refs);
+    ref.focus();
+  },
+
   render() {
-    return <D3Chart />;
+    // return <D3Chart />;
     // Uncomment out to try others
     // return <Wave />;
     // return <ReactLogo />;
-    // return <Chart />;
+    return <Chart />;
   }
 });
 
