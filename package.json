@@ -1,6 +1,6 @@
 {
   "name": "react-native-svg",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "Svg.js",
   "scripts": {
     "start": "node_modules/react-native/packager/packager.sh"
