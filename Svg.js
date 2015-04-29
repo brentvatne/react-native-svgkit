@@ -24,11 +24,11 @@ var Svg = React.createClass({
   },
 
   statics: {
-    Path: (path) => {
+    PathSerializer: (path) => {
       var { fill, stroke, strokeWidth, strokeMiterLimit, d, transform } = path.props;
       return `<path fill="${fill}" stroke="${stroke}" stroke-width="${strokeWidth}" d="${d}" transform="${transform}"/>`
     },
-    Line: (line) => {
+    LineSerializer: (line) => {
       var { x1, x2, y1, y2, style } = path.props;
       return `<path fill="${fill}" stroke="${stroke}" stroke-width="${strokeWidth}" d="${d}" transform="${transform}"/>`
     }
@@ -39,7 +39,7 @@ var Svg = React.createClass({
   },
 
   serialize(el) {
-    return Svg[el.type.displayName](el);
+    return Svg[el.type.displayName + 'Serializer'](el);
   },
 
   stateFromChildren() {
@@ -72,6 +72,8 @@ var Svg = React.createClass({
     return <RNSvg {...nativeProps} />
   },
 });
+
+Svg.Path = require('./Path');
 
 var deepDiffer = require('deepDiffer');
 
