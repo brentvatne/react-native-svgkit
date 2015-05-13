@@ -36,7 +36,10 @@
 }
 
 - (void)setForceUpdate:(float)throwaway {
-  [self renderImage];
+  // only re-render once initialized
+  if(_imageView) {
+    [self renderImage];
+  }
 }
 
 - (void)renderImage
