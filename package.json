@@ -1,10 +1,11 @@
 {
   "name": "react-native-svg",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "main": "Svg.js",
+  "description": "A <Svg /> element for react-native that renders Svg images using SVGKit",
   "author": "Brent Vatne <brentvatne@gmail.com> (https://github.com/brentvatne)",
   "peerDependencies": {
-    "react-native": "^0.4.1"
+    "react-native": "^0.4.2"
   },
   "dependencies": {
     "d3": "^3.5.5",
