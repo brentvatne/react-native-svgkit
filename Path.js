@@ -5,15 +5,11 @@
 
 'use strict';
 
-var createReactIOSNativeComponentClass = require('createReactIOSNativeComponentClass');
-var ReactIOSViewAttributes = require('ReactIOSViewAttributes');
-var merge = require('merge');
 var React = require('react-native');
 
 var {
   View,
   PropTypes,
-  StyleSheet,
 } = React;
 
 var Path = React.createClass({

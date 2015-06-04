@@ -5,16 +5,13 @@
 
 'use strict';
 
-var createReactIOSNativeComponentClass = require('createReactIOSNativeComponentClass');
-var ReactIOSViewAttributes = require('ReactIOSViewAttributes');
-var merge = require('merge');
 var React = require('react-native');
 var ReactChildren = require('ReactChildren');
 
 var {
   View,
   PropTypes,
-  StyleSheet,
+  requireNativeComponent,
 } = React;
 
 var Svg = React.createClass({
@@ -73,13 +70,7 @@ var Svg = React.createClass({
   },
 });
 
+var RNSvg = requireNativeComponent('RNSvg', null);
 Svg.Path = require('./Path');
-
-var deepDiffer = require('deepDiffer');
-
-var RNSvg = createReactIOSNativeComponentClass({
-  validAttributes: merge(ReactIOSViewAttributes.UIView, {src: true, data: {differ: deepDiffer}, originalWidth: true, originalHeight: true, forceUpdate: true}),
-  uiViewClassName: 'RNSvg',
-});
 
 module.exports = Svg;
