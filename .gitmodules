@@ -1,0 +1,3 @@
+[submodule "Libraries/SVGKit"]
+	path = Libraries/SVGKit
+	url = https://github.com/SVGKit/SVGKit
