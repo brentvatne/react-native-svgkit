@@ -6,7 +6,6 @@
 'use strict';
 
 var React = require('react-native');
-var ReactChildren = require('ReactChildren');
 
 var {
   View,
@@ -42,7 +41,7 @@ var Svg = React.createClass({
   stateFromChildren() {
     var data = `<svg xmlns="http://www.w3.org/2000/svg" width="${this.props.width}px" height="${this.props.height}px">`;
 
-    ReactChildren.forEach(this.props.children, (child) => {
+    React.Children.forEach(this.props.children, (child) => {
       data = data + this.serialize(child);
     });
 
