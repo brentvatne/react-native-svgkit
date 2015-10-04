@@ -36,7 +36,7 @@ var Svg = React.createClass({
   },
 
   serialize(el) {
-    return Svg[el.type.displayName + 'Serializer'](el);
+    return Svg['PathSerializer'](el);
   },
 
   stateFromChildren() {
