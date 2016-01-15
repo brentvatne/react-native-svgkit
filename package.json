@@ -17,5 +17,8 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:brentvatne/react-native-svg.git"
+  },
+  "scripts": {
+    "postinstall": "cd Libraries/ && git clone git@github.com:SVGKit/SVGKit.git"
   }
 }
