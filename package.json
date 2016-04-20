@@ -1,6 +1,6 @@
 {
   "name": "react-native-svgkit",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "main": "Svg.js",
   "description": "A <Svg /> element for react-native that renders Svg images using SVGKit",
   "author": "Brent Vatne <brentvatne@gmail.com> (https://github.com/brentvatne)",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:brentvatne/react-native-svg.git"
+    "url": "git@github.com:brentvatne/react-native-svgkit.git"
   },
   "scripts": {
     "postinstall": "cd Libraries/ && git clone git@github.com:SVGKit/SVGKit.git"
