@@ -3,7 +3,7 @@
 Render SVG images or write your own in-line and animate them, fun! Uses
 SVGKit. Formerly known as react-native-svgkit, but this now belongs to a
 library that is actually under active development: see [magicmight's
-react-native-svgkit](https://github.com/magicismight/react-native-art-svg).
+react-native-svg](https://github.com/magicismight/react-native-art-svg).
 
 ## How to use it
 
