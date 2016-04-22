@@ -13,6 +13,7 @@ var {
 } = React;
 
 var Path = React.createClass({
+  displayName: "Path",
   propTypes: {
     fill: PropTypes.string,
     stroke: PropTypes.string,

@@ -15,6 +15,7 @@ var {
 
 
 var Line = React.createClass({
+  displayName: "Line",
   propTypes: {
     x1: PropTypes.string,
     y1: PropTypes.string,
